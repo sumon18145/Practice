@@ -1,10 +1,10 @@
 ## Making Hypothesis
-# H0: The mena sales volumes of new items are all equal
+# H0: The mean sales volumes of new items are all equal
 # Ha: At least one of them are not equal
 
 set.seed(145)
 
-## Making a data fram form our given data 
+## Making a data frame form our given data 
 
 Item_1 <- c(22,42,44,52,45,37)
 Item_2 <- c(52,33,8,47,43,32)
@@ -27,12 +27,12 @@ n <- 6       #observations per treatment
 
 tm <- gl(k, 1, n*k, factor(f))  #matching treatments.
 
-## Apply the function "aov" to a formula thet describes the response r by the teratment factor tm
+## Apply the function "aov" to a formula then describes the response "r" by the treatment factor "tm"
 
 av <- aov(r ~ tm)
 
-## Print out the ANOVA table with the "summsry" function.
+## Print out the ANOVA table with the "summary" function.
 
 summary(av)
 
-## Comments: p-value 0f 0.105 > 0.05 significance level. Do not reject H0. Theis means that the mena sales volumes of new items are all equal. 
+## Comments: p-value 0f 0.105 > 0.05 significance level. Do not reject H0. This means that the mean sales volumes of new items are all equal. 
